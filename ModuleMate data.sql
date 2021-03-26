@@ -24,6 +24,7 @@ values
 ('bachelor''s degree'),
 ('Diploma'),
 ('Higher Certificate')
+go
 
 insert into Course (code,nfqLevel,fullName,internationallyRecognised,typeID)
 values
@@ -38,36 +39,43 @@ values
 ('Not registered'),
 ('Registered'),
 ('Done')
+go
+
+insert into Module (code, fullname)
+values
+('COS2601','Theoretical Computer Science 2')
+go
 
 insert into StudentModule
 values
 (1,1),
 (1,2),
 (1,3)
+go
 
 insert into CourseUniversity
 values
 (1,1)
+go
 
 insert into CourseModule (courseID,moduleID)
 values
 (1,1),
 (1,2),
 (1,3)
+go
 
 insert into StudentModuleHistory(studentID,moduleID,progressID,mark)
 values
 (1,1,2,NULL),
 (1,2,2,NULL),
 (1,3,2,NULL)
+go
 
 insert into StudentCourseHistory (studentID,courseID,progressID,averageMark)
 values
 (1,1,2,NULL)
-
-insert into Module (code, fullname)
-values
-('COS2601','Theoretical Computer Science 2')
+go
 
 insert into ModuleDependancies (moduleID,dependancyModuleID)
 values
