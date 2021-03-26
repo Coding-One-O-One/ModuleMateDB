@@ -21,19 +21,6 @@ create table Module
 )
 go
 
-create table Course
-(
-	courseID int identity(1,1) primary key not null,
-	code nvarchar(32) not null,
-	nfqLevel int not null,
-	fullName nvarchar(256) not null,
-	internationallyRecognised bit not null,
-	typeID int not null,
-	constraint FK_CourseTypeLookup_typeID foreign key (typeID) references CourseTypeLookup(courseTypeLookupID)
-)
-go
-
-
 create table University
 (
 	universityID int identity(1,1) primary key not null,
@@ -60,6 +47,18 @@ create table ProgressTypeLookup
 (
 	progressTypeLookupID smallint identity(1,1) primary key not null,
 	fullName nvarchar(256)
+)
+go
+
+create table Course
+(
+	courseID int identity(1,1) primary key not null,
+	code nvarchar(32) not null,
+	nfqLevel int not null,
+	fullName nvarchar(256) not null,
+	internationallyRecognised bit not null,
+	typeID int not null,
+	constraint FK_CourseTypeLookup_typeID foreign key (typeID) references CourseTypeLookup(courseTypeLookupID)
 )
 go
 
