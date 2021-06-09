@@ -4,6 +4,14 @@ Divan van Zyl for Coding101
 Server version: Microsoft SQL Azure (RTM) - 12.0.2000.8   Feb 20 2021 17:51:58
 **********************************************************/
 
+
+--------------
+-- Database --
+--------------
+
+create database ModuleMate
+go
+
 ------------
 -- Tables --
 ------------
